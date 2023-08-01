@@ -1,7 +1,6 @@
 package com.mindunits.coursestudentmanager.repository;
 
 
-import com.mindunits.coursestudentmanager.models.Students;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;

@@ -1,7 +1,7 @@
 package com.mindunits.coursestudentmanager.controllers;
 
 
-import com.mindunits.coursestudentmanager.models.Students;
+import com.mindunits.coursestudentmanager.models.Student;
 import com.mindunits.coursestudentmanager.repository.StudentRepository;
 import com.mindunits.coursestudentmanager.validators.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class StudentController {
 
 
     @PostMapping("/api/student")
-    public String registrarse(@RequestBody Students student){
+    public String registrarse(@RequestBody Student student){
 
         String studentMail = student.getEmail();
         String studentName = student.getStudent_name();
