@@ -1,28 +1,23 @@
-
 package com.mindunits.coursestudentmanager.models;
-
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name = "professor")
+public class Professor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_student")
+    @Column(name = "id_professor")
     private Long id;
 
-    @Column(name = "student_name", nullable = false)
+    @Column(name = "professor_name", nullable = false)
     private String name;
 
-
-    @Column(name = "email", unique = true, nullable = false)
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "phone", unique = true, nullable = false)
+    @Column(name = "phone")
     private String phone;
-
 }
-
