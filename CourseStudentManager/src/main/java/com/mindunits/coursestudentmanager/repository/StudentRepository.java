@@ -17,7 +17,7 @@ public class StudentRepository {
     @Transactional
     public void guardarEstudiante(String nameStudent, String emailStudent, String phoneStudent){
 
-        String consultaSql = "INSERT INTO Students (student_name, email, phone) VALUES (:nameParametro, :emailParametro, :phoneParametro)";
+        String consultaSql = "INSERT INTO Student (student_name, email, phone) VALUES (:nameParametro, :emailParametro, :phoneParametro)";
 
         baseDeDatos.createQuery(consultaSql)
                 .setParameter("nameParametro", nameStudent)
