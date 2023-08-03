@@ -15,11 +15,11 @@ target/
 application.properties
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
-
+application.properties
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
