@@ -22,7 +22,7 @@ public class StudentController {
     public String registrarse(@RequestBody Student student){
 
         String studentMail = student.getEmail();
-        String studentName = student.getStudent_name();
+        String studentName = student.getName();
         String studentPhone = student.getPhone();
 
         if(emailValidator.esValido(studentMail) == false){
