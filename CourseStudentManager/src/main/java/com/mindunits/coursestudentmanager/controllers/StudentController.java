@@ -25,12 +25,11 @@ public class StudentController {
         String studentName = student.getName();
         String studentPhone = student.getPhone();
 
-        if(emailValidator.esValido(studentMail) == false){
+       if(emailValidator.esValido(studentMail) == false){
             return "No es un mail válido";
         }
 
         repositorioDeEstudiantes.guardarEstudiante(studentName, studentMail, studentPhone);
-
         return "Estudiante agregado a base de datos.";
 
     }
