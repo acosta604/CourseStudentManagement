@@ -1,14 +1,5 @@
 # IntelliJ IDEA
-.idea/
-
-# Compiled files
-*.class
-
-# Log files
-*.log
-
-# Build output
-/target/
+.idea
 
 # Dependency directories
 bin/
@@ -18,20 +9,6 @@ out/
 # Gradle
 .gradle/
 build/
-
-# Maven
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-maven-metadata-local.xml
-/.mvn/wrapper/
-
-# Spring Boot Devtools
-/.idea/spring-boot-devtools.xml
 
 # Miscellaneous
 *.iml
@@ -48,5 +25,3 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Spring Boot Application Properties
-/src/main/resources/application.properties
