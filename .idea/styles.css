@@ -1,0 +1,36 @@
+/* Estilos previos son los mismos */
+
+body {
+    background-color: #E3DAC9	; }
+
+.grades {
+    margin-top: 1rem;
+  }
+  
+  .grade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .grade span {
+    margin-right: 0.5rem;
+  }
+  
+  .btn-add-grade {
+    margin-top: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos posteriores son los mismos */
+  
