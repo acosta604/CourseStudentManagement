@@ -2,7 +2,7 @@ package com.mindunits.coursestudentmanager.controllers;
 
 
 import com.mindunits.coursestudentmanager.models.Student;
-import com.mindunits.coursestudentmanager.repository.StudentRepository;
+import com.mindunits.coursestudentmanager.repository.StudentRepositoryImp;
 import com.mindunits.coursestudentmanager.services.StudentService;
 import com.mindunits.coursestudentmanager.validators.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class StudentController {
     EmailValidator emailValidator = new EmailValidator();
 
     @Autowired
-    StudentRepository repositorioDeEstudiantes;
+    StudentRepositoryImp repositorioDeEstudiantesImp;;
 
 
     @PostMapping("/api/student")
@@ -33,7 +33,7 @@ public class StudentController {
             return "No es un mail válido";
         }
 
-        repositorioDeEstudiantes.guardarEstudiante(studentName, studentMail, studentPhone);
+        repositorioDeEstudiantesImp.guardarEstudiante(studentName, studentMail, studentPhone);
         return "Estudiante agregado a base de datos.";
 
     }
