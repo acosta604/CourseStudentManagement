@@ -19,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -58,6 +59,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "e9ba7f0b2378c2bd78b9ed450fb40d94",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -85,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690323030532</updated>
       <workItem from="1690936712471" duration="2271000" />
+      <workItem from="1691102619207" duration="2048000" />
     </task>
     <servers />
   </component>

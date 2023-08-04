@@ -3,11 +3,13 @@ package com.mindunits.coursestudentmanager.controllers;
 
 import com.mindunits.coursestudentmanager.models.Student;
 import com.mindunits.coursestudentmanager.repository.StudentRepository;
+import com.mindunits.coursestudentmanager.services.StudentService;
 import com.mindunits.coursestudentmanager.validators.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.NoSuchElementException;
 
 @RestController
 public class StudentController {
@@ -23,6 +25,8 @@ public class StudentController {
 
         String studentMail = student.getEmail();
         String studentName = student.getName();
+
+
         String studentPhone = student.getPhone();
 
        if(emailValidator.esValido(studentMail) == false){
@@ -34,6 +38,23 @@ public class StudentController {
 
     }
 
+
+    private final StudentService studentService;
+
+    @Autowired
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
+
+    @PutMapping("/api/student/{id}")
+    public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student updatedStudent) {
+        try {
+            Student updated = studentService.updateStudent(id, updatedStudent.getName(), updatedStudent.getEmail(), updatedStudent.getPhone());
+            return ResponseEntity.ok(updated);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
 
 }
