@@ -48,5 +48,3 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# Spring Boot Application Properties
-/src/main/resources/application.properties
