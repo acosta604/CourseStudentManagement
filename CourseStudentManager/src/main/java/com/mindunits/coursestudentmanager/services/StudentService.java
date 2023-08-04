@@ -1,21 +1,20 @@
 package com.mindunits.coursestudentmanager.services;
-
+import com.mindunits.coursestudentmanager.repository.StudentRepository;
 import com.mindunits.coursestudentmanager.models.Student;
-import com.mindunits.coursestudentmanager.repository.StudentRepositoryUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
 @Service
 public class StudentService {
-    private final StudentRepositoryUpdate studentRepositoryUpdate;
+    private final StudentRepository studentRepository;
 
     @Autowired
-    public StudentService(StudentRepositoryUpdate studentRepositoryUpdate) {
-        this.studentRepositoryUpdate = studentRepositoryUpdate;
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
     }
     public Student updateStudent(Long id, String name, String email, String phone) {
-        Student existingStudent = studentRepositoryUpdate.findById(id).orElse(null);
+        Student existingStudent = studentRepository.findById(id).orElse(null);
 
         if (existingStudent == null) {
             throw new NoSuchElementException("Student with ID " + id + " not found");
@@ -25,6 +24,6 @@ public class StudentService {
         existingStudent.setEmail(email);
         existingStudent.setPhone(phone);
 
-        return studentRepositoryUpdate.save(existingStudent);
+        return studentRepository.save(existingStudent);
     }
 }
