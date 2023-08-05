@@ -21,7 +21,7 @@ public class StudentController {
 
 
     @PostMapping("/api/student")
-    public String register(@RequestBody Student student){
+    public String registrarse(@RequestBody Student student){
 
         String studentMail = student.getEmail();
         String studentName = student.getName();
