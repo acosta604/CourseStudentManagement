@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
+import java.util.Optional;
+
 @Service
 public class StudentService {
     private final StudentRepository studentRepository;
@@ -25,5 +27,9 @@ public class StudentService {
         existingStudent.setPhone(phone);
 
         return studentRepository.save(existingStudent);
+    }
+
+    public Optional<Student> getStudent(Long id){
+        return studentRepository.findById(id);
     }
 }

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @RestController
 public class StudentController {
@@ -25,8 +26,6 @@ public class StudentController {
 
         String studentMail = student.getEmail();
         String studentName = student.getName();
-
-
         String studentPhone = student.getPhone();
 
        if(emailValidator.esValido(studentMail) == false){
@@ -56,5 +55,8 @@ public class StudentController {
         }
     }
 
-
+    @GetMapping("/api/student/{id}")
+    public Optional<Student> getBId(@PathVariable("id") Long id){
+        return studentService.getStudent(id);
+    }
 }
