@@ -55,6 +55,7 @@ public class StudentController {
         }
     }
 
+    feature/ADCYE-12/implementar-endpoint-de-para-busqueda-de-estudiantes
     @GetMapping("/api/student/{id}")
     public ResponseEntity<?> getStudent(@PathVariable Long id) {
        Student student = studentService.getStudent(id);
@@ -64,3 +65,6 @@ public class StudentController {
         return ResponseEntity.ok(student);
     }
 }
+
+
+
