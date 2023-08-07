@@ -6,6 +6,7 @@ import com.mindunits.coursestudentmanager.repository.StudentRepositoryImp;
 import com.mindunits.coursestudentmanager.services.StudentService;
 import com.mindunits.coursestudentmanager.validators.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,8 +26,6 @@ public class StudentController {
 
         String studentMail = student.getEmail();
         String studentName = student.getName();
-
-
         String studentPhone = student.getPhone();
 
        if(emailValidator.esValido(studentMail) == false){
@@ -56,5 +55,16 @@ public class StudentController {
         }
     }
 
-
+    feature/ADCYE-12/implementar-endpoint-de-para-busqueda-de-estudiantes
+    @GetMapping("/api/student/{id}")
+    public ResponseEntity<?> getStudent(@PathVariable Long id) {
+       Student student = studentService.getStudent(id);
+        if (student == null) {
+           return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("Estudiante no encontrado"));
+        }
+        return ResponseEntity.ok(student);
+    }
 }
+
+
+
