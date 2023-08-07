@@ -6,11 +6,11 @@ import com.mindunits.coursestudentmanager.repository.StudentRepositoryImp;
 import com.mindunits.coursestudentmanager.services.StudentService;
 import com.mindunits.coursestudentmanager.validators.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @RestController
 public class StudentController {
@@ -56,7 +56,11 @@ public class StudentController {
     }
 
     @GetMapping("/api/student/{id}")
-    public Optional<Student> getBId(@PathVariable("id") Long id){
-        return studentService.getStudent(id);
+    public ResponseEntity<?> getStudent(@PathVariable Long id) {
+       Student student = studentService.getStudent(id);
+        if (student == null) {
+           return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("Estudiante no encontrado"));
+        }
+        return ResponseEntity.ok(student);
     }
 }

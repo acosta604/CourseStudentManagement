@@ -29,7 +29,7 @@ public class StudentService {
         return studentRepository.save(existingStudent);
     }
 
-    public Optional<Student> getStudent(Long id){
-        return studentRepository.findById(id);
+    public Student getStudent(Long id){
+        return studentRepository.findById(id).orElse(null);
     }
 }
