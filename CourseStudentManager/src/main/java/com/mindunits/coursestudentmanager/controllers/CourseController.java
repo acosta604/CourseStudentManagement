@@ -13,7 +13,7 @@ import javax.imageio.plugins.tiff.TIFFTag;
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
-
+@CrossOrigin(origins = "*") //para cargar los datos de la bd en el front
 @RestController
 public class CourseController {
     @Autowired

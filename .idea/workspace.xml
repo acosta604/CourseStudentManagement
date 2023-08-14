@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7600a3ce-01b2-489a-88bf-cb5355459928" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +35,42 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "Z:/atl/coursecrud/CourseStudentManagement"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jalum\Desktop\CourseStudentManagement\CourseStudentManager" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CourseStudentManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="CourseStudentManager" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mindunits.coursestudentmanager.CourseStudentManagerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mindunits.coursestudentmanager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CourseStudentManagerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
