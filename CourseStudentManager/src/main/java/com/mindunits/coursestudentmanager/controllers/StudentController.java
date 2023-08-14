@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-@CrossOrigin(origins = "*") //para cargar los datos de la bd en el front
+@CrossOrigin(origins = "*")
 @RestController
 public class StudentController {
 
@@ -73,6 +73,17 @@ public class StudentController {
         try {
             List<Student> getAll = studentService.getAllStudents();
             return ResponseEntity.ok(getAll);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
+    @DeleteMapping("/api/student/{id}")
+    public ResponseEntity<Student> deleteStudent(@PathVariable Long id) {
+        try {
+            studentService.deleteStudentById(id);
+            return ResponseEntity.ok().build();
         } catch (NoSuchElementException e) {
             return ResponseEntity.notFound().build();
         }
