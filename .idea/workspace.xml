@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7600a3ce-01b2-489a-88bf-cb5355459928" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +41,14 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "e9ba7f0b2378c2bd78b9ed450fb40d94",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -80,7 +84,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691422215895</updated>
+      <workItem from="1692040769769" duration="1913000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
