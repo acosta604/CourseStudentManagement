@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/edit-add-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+    
+  
+    <title>edit</title>
+</head>
+<body class="body">
+    
+    <div id="editCard" class="card">
+       
+        <form id="editForm" class="edit-form">
+            <a href="/students.html">
+                <svg  class="icon-back" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm2.354 12.646-.707.707L4.293 8l5.354-5.354.707.707L5.707 8l4.647 4.646z" fill="#ae00ff" class="fill-000000"></path></svg>
+            </a>
+          
+            <h2 class="title">EDIT STUDENT</h2>
+            <input type="hidden" id="studentId">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" required>
+            <div class="container-buttons">
+                <button type="submit">Save</button>
+         
+            </div>
+            
+        </form>
+      
+    </div>
+    <script src="/js/crud-student.js"></script>
+  
+    
+</body>
+</html>
