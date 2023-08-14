@@ -1,0 +1,116 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;800&display=swap');
+
+  a{
+    text-decoration: none !important;
+  }
+
+.body {
+ 
+background-color:#d4c3e228;
+
+}
+ .container-title{
+  background-color: #6926D7;
+ }
+.title{
+  margin-top:5%;
+ text-align: left;
+ font-family: 'Mukta', sans-serif;
+ font-size: 24px;
+ font-weight: 800;
+ color: #ffffff;
+
+}
+/* Estilos de la tabla */
+table {
+  /* ... Tus estilos existentes ... */
+  border-radius: 12px; /* Agrega esquinas redondeadas */
+  overflow: hidden; /* Evita que los bordes redondeados se corten si se agrega un borde interno */
+  margin: 0 auto; /* Centra la tabla horizontalmente */
+  width: 95%; /* Limita el ancho de la tabla */
+  margin-top: 12px; /* Añade un poco de espacio arriba */
+  margin-bottom: 20px; /* Añade espacio abajo */
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra a todos los bordes */
+  background-color: #FFFF;
+}
+
+.name-cell, .email-cell, .phone-cell,.options-cell{
+
+  font-family: 'Mukta', sans-serif;
+}
+
+#navi{
+  margin-bottom: 2%;
+}
+
+#search{
+  border-radius: 30px;
+ margin-left: 30px;
+ border: 1px solid #6403ff; /* Borde gris por defecto */
+
+}
+
+.icon-search{
+  height: 32px;
+  width: 32px;
+}
+
+/* Estilos cuando el input está en foco */
+#search:focus {
+  border-color: #6506ff !important; /* Cambiar el color del borde a morado */
+  outline: none;
+}
+/* Estilos para centrar el placeholder en un campo de entrada */
+input::placeholder {
+  text-align: center; /* Centra el texto del placeholder */
+}
+#resultCount{
+  font-family: 'Mukta', sans-serif;
+ margin-left: 32px;
+ padding: 10px;
+ color: #333136;
+}
+
+
+/* ... Resto de tus estilos ... */
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    color: #333333;
+  }
+  
+  thead th {
+    background-color: #6926D7 ;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: azure;
+  }
+
+  .edit-button, .delete-button, .add-button {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilo para las filas de la tabla */
+#tableBody tr {
+
+  border-bottom: 1px solid #ccc; /* Borde inferior gris */
+}
+
+.pagination {
+  margin-left: 30px;
+ 
+ 
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
