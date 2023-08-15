@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7600a3ce-01b2-489a-88bf-cb5355459928" name="Changes" comment="">
+    
       <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/NoteController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/models/Note.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/repository/NoteRepository.java" afterDir="false" />
@@ -14,6 +15,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" afterDir="false" />
+
+   
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
