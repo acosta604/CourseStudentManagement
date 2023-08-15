@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7600a3ce-01b2-489a-88bf-cb5355459928" name="Changes" comment="">
+    
+      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/NoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/models/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/repository/NoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/repository/NoteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" afterDir="false" />
+
+   
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -25,7 +37,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Tf7Jz8uDFbN3ndzawWVGjXIhHW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,6 +57,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/ADCYE-3/Gestion-de-notas-y-calificaciones&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/NIC/Desktop/CourseStudentManagement&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,11 +87,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.CourseStudentManagerApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
