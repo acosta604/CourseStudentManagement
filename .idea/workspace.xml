@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7600a3ce-01b2-489a-88bf-cb5355459928" name="Changes" comment="">
-    
-      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/NoteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/models/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/repository/NoteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/repository/NoteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/NoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/controllers/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/resources/application.properties" afterDir="false" />
-
-   
+      <change beforePath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseStudentManager/src/main/java/com/mindunits/coursestudentmanager/services/NoteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691422215895</updated>
       <workItem from="1692040769769" duration="1913000" />
+      <workItem from="1692137103982" duration="2200000" />
     </task>
     <servers />
   </component>
