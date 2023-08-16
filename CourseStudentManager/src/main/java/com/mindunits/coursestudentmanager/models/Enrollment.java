@@ -1,5 +1,6 @@
 package com.mindunits.coursestudentmanager.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -7,6 +8,7 @@ import java.util.Date;
 
 @Data
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name = "enrollment")
 public class Enrollment {
     @Id
