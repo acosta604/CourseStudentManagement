@@ -45,4 +45,27 @@ public class EnrollmentController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/api/enrollment/{id}")
+    public ResponseEntity<Enrollment> getIdEnrollment(@PathVariable Long id){
+        try {
+            Enrollment getEnrollmentId = enrollmentService.getIdEnrollment(id);
+            return ResponseEntity.ok(getEnrollmentId);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PutMapping("/api/enrollment/update/{id}")
+    public ResponseEntity<Enrollment> updateEnrollment(@PathVariable Long id, @RequestBody Enrollment enrollment) {
+        try {
+            Enrollment updateEnrollment = enrollmentService.updateEnrollment(
+                    id,
+                    enrollment.getStatus(),
+                    enrollment.getDate());
+            return ResponseEntity.ok(updateEnrollment);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
