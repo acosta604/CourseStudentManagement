@@ -32,4 +32,9 @@ public class Professor {
 
     @Column(name = "phone")
     private String phone;
+
+    @Column(name = "active", columnDefinition = "BOOLEAN DEFAULT true")
+    private boolean active = true;
+
+
 }

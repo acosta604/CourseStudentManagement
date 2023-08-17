@@ -1,5 +1,4 @@
 package com.mindunits.coursestudentmanager.services;
-
 import com.mindunits.coursestudentmanager.models.Professor;
 import com.mindunits.coursestudentmanager.repository.ProfessorRepositoryPost;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,26 +17,44 @@ public class ProfessorService {
         this.professorRepositoryPost = professorRepositoryPost;
     }
 
-    public Professor saveProfessor(Professor professor){
+    public Professor saveProfessor(Professor professor) {
         return professorRepositoryPost.save(professor);
     }
 
-    public List<Professor> getAllProfessor() { return professorRepositoryPost.findAll(); }
+    public List<Professor> getAllProfessor() {
+        return professorRepositoryPost.findAll();
+    }
 
-    public Professor getIdProfessor(Long id) { return professorRepositoryPost.getById(id); }
+    public Professor getIdProfessor(Long id) {
+        return professorRepositoryPost.getById(id);
+    }
 
-    public void deleteProfessorById(Long id) { professorRepositoryPost.deleteById(id); }
+    public void deleteProfessorById(Long id) {
+        professorRepositoryPost.deleteById(id);
+    }
 
-    public Professor updateProfessor(Long id, String nameProfessor, String emailProfessor, String phoneProfessor) {
+    public void desactivateProfessor(Long id) {
+        Professor professor = professorRepositoryPost.findById(id)
+                .orElseThrow(NoSuchElementException::new);
+
+        professor.setActive(false);
+        professorRepositoryPost.save(professor);
+    }
+
+    public Professor updateProfessor(Long id, String nameProfessor, String emailProfessor, String phoneProfessor, Boolean active) {
         Professor existingProfessor = professorRepositoryPost.findById(id).orElse(null);
 
         if (existingProfessor == null) {
             throw new NoSuchElementException(String.format("Professor with id %s not found.", id));
         }
-        System.out.println();
+
         existingProfessor.setName(nameProfessor == null ? existingProfessor.getName() : nameProfessor);
         existingProfessor.setEmail(emailProfessor == null ? existingProfessor.getEmail() : emailProfessor);
         existingProfessor.setPhone(phoneProfessor == null ? existingProfessor.getPhone() : phoneProfessor);
+
+        if (active != null) {
+            existingProfessor.setActive(active);
+        }
 
         return professorRepositoryPost.save(existingProfessor);
     }
