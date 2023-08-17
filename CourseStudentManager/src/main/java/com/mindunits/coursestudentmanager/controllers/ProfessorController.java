@@ -5,10 +5,9 @@ import com.mindunits.coursestudentmanager.services.ProfessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
@@ -31,5 +30,52 @@ public class ProfessorController {
         }
     }
 
+    @GetMapping("/api/professor")
+    public ResponseEntity<List<Professor>> getAllProfessor(){
+        try {
+            List<Professor> getAllProfessor = professorService.getAllProfessor();
+            return ResponseEntity.ok(getAllProfessor);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
+    @GetMapping("/api/professor/{id}")
+    public ResponseEntity<Professor> getIdProfessor(@PathVariable Long id) {
+        try {
+            Professor getIdProfessor = professorService.getIdProfessor(id);
+            return ResponseEntity.ok(getIdProfessor);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    /*
+    @DeleteMapping("/api/professor/{id}")
+    public ResponseEntity<Professor> deleteProfessor(@PathVariable Long id) {
+        // No puedo eliminar un profesor que esta siendo utilizado en un curso
+        // ver que hacer en ese caso, con herencia en clases y la configuracion en los entities
+
+        try {
+            professorService.deleteProfessorById(id);
+            return ResponseEntity.ok().build();
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    } */
+
+    @PutMapping("/api/professor/update/{id}")
+    public ResponseEntity<Professor> updateProfessor(@PathVariable Long id, @RequestBody Professor professor) {
+        try {
+            Professor updateProfessor = professorService.updateProfessor(
+                    id,
+                    professor.getName(),
+                    professor.getEmail(),
+                    professor.getPhone()
+                    );
+            return ResponseEntity.ok(updateProfessor);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
