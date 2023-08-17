@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-
+@CrossOrigin(origins = "*") //para cargar los datos de la bd en el front
 @RestController
 public class ProfessorController {
 
