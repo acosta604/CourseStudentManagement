@@ -10,4 +10,5 @@ public class ProfessorRepository {
     @PersistenceContext
     EntityManager dataBase;
 
+
 }

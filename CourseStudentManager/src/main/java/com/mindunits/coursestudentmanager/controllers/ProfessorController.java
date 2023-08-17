@@ -1,6 +1,7 @@
 package com.mindunits.coursestudentmanager.controllers;
 
 import com.mindunits.coursestudentmanager.models.Professor;
+import com.mindunits.coursestudentmanager.models.Student;
 import com.mindunits.coursestudentmanager.services.ProfessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -50,6 +51,21 @@ public class ProfessorController {
         }
     }
 
+
+    // como profesor esta relacionado con la tabla curso, se creo una columna nueva
+    //para que al enviar la solucitud delete, cambie el estado del profesor de activo a inactivo
+    //De esta manera sabremos el estado del profesor y no afectara el funcionamiento del programa
+    @DeleteMapping("/api/professor/{id}")
+    public ResponseEntity<String> deleteProfessor(@PathVariable Long id) {
+        try {
+            professorService.desactivateProfessor(id);
+            return ResponseEntity.ok("Professor desactivated successfully.");
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
     /*
     @DeleteMapping("/api/professor/{id}")
     public ResponseEntity<Professor> deleteProfessor(@PathVariable Long id) {
@@ -71,11 +87,13 @@ public class ProfessorController {
                     id,
                     professor.getName(),
                     professor.getEmail(),
-                    professor.getPhone()
+                    professor.getPhone(),
+                    professor.isActive()
                     );
             return ResponseEntity.ok(updateProfessor);
         } catch (NoSuchElementException e) {
             return ResponseEntity.notFound().build();
         }
     }
+
 }
