@@ -49,6 +49,15 @@ public class CourseService {
         existingCourse.setProfessor(existingCourse.getProfessor());
 
         return courseRepositoryPost.save(existingCourse);
-        /**return new Course();*/
+
     }
+
+    public String getProfessorNameByCourseId(Long courseId) {
+        Course course = courseRepositoryPost.findById(courseId)
+                .orElseThrow(NoSuchElementException::new);
+
+        String professorName = course.getProfessor().getName();
+        return professorName;
+    }
+
 }
