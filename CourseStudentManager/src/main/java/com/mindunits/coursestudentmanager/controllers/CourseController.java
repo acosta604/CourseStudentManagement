@@ -79,5 +79,18 @@ public class CourseController {
         }
 
     }
+
+
+    @GetMapping("/api/course/{id}/professor")
+    public ResponseEntity<String> getProfessorNameByCourseId(@PathVariable Long id) {
+        try {
+            String professorName = courseService.getProfessorNameByCourseId(id);
+            return ResponseEntity.ok(professorName);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
 }
 
