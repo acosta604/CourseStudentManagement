@@ -1,6 +1,6 @@
 package com.mindunits.coursestudentmanager.repository;
 
-import jakarta.persistence.Entity;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;

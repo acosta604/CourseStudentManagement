@@ -3,13 +3,9 @@ package com.mindunits.coursestudentmanager.controllers;
 import com.mindunits.coursestudentmanager.models.Course;
 import com.mindunits.coursestudentmanager.repository.CourseRepository;
 import com.mindunits.coursestudentmanager.services.CourseService;
-import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.imageio.plugins.tiff.TIFFTag;
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;

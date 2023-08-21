@@ -1,13 +1,12 @@
 package com.mindunits.coursestudentmanager.services;
-import com.mindunits.coursestudentmanager.models.Enrollment;
+
 import com.mindunits.coursestudentmanager.repository.StudentRepository;
 import com.mindunits.coursestudentmanager.models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
+
 
 @Service
 public class StudentService {

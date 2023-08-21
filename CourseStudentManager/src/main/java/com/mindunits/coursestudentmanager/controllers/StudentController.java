@@ -1,7 +1,5 @@
 package com.mindunits.coursestudentmanager.controllers;
 
-
-import com.mindunits.coursestudentmanager.models.Enrollment;
 import com.mindunits.coursestudentmanager.models.Student;
 import com.mindunits.coursestudentmanager.repository.StudentRepositoryImp;
 import com.mindunits.coursestudentmanager.services.StudentService;
@@ -10,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.NoSuchElementException;
 @CrossOrigin(origins = "*") //para cargar los datos de la bd en el front

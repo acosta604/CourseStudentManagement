@@ -1,7 +1,6 @@
 package com.mindunits.coursestudentmanager.controllers;
 
 import com.mindunits.coursestudentmanager.models.Professor;
-import com.mindunits.coursestudentmanager.models.Student;
 import com.mindunits.coursestudentmanager.services.ProfessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

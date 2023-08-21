@@ -1,7 +1,6 @@
 package com.mindunits.coursestudentmanager.services;
 
 import com.mindunits.coursestudentmanager.models.Course;
-import com.mindunits.coursestudentmanager.models.Professor;
 import com.mindunits.coursestudentmanager.repository.CourseRepositoryPost;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

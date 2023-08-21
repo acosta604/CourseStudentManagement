@@ -1,11 +1,10 @@
 package com.mindunits.coursestudentmanager.models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor;
+
 
 import java.util.Date;
 

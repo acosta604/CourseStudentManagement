@@ -1,9 +1,9 @@
 package com.mindunits.coursestudentmanager.services;
+
 import com.mindunits.coursestudentmanager.models.Professor;
 import com.mindunits.coursestudentmanager.repository.ProfessorRepositoryPost;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.NoSuchElementException;
 

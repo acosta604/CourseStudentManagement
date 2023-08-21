@@ -4,7 +4,6 @@ import com.mindunits.coursestudentmanager.models.Enrollment;
 import com.mindunits.coursestudentmanager.repository.EnrollmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
