@@ -65,16 +65,17 @@ public class CourseController {
     public ResponseEntity<Course> updateCourse(@PathVariable Long id, @RequestBody Course course){
         try {
             Course updatedCourse = courseService.updateCourse(id,
-                                                              course.getName(),
-                                                              course.getDescription(),
-                                                              course.getStartDate(),
-                                                              course.getEndDate());
+                    course.getName(),
+                    course.getDescription(),
+                    course.getStartDate(),
+                    course.getEndDate(),
+                    course.getProfessor().getId()); // Agrega el ID del nuevo profesor
             return ResponseEntity.ok(updatedCourse);
         } catch (NoSuchElementException e) {
             return ResponseEntity.notFound().build();
         }
-
     }
+
 
 
     @GetMapping("/api/course/{id}/professor")
