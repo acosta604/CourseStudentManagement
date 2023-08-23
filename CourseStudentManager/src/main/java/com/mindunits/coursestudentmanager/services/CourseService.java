@@ -1,13 +1,16 @@
 package com.mindunits.coursestudentmanager.services;
 
 import com.mindunits.coursestudentmanager.models.Course;
+import com.mindunits.coursestudentmanager.models.Professor;
 import com.mindunits.coursestudentmanager.repository.CourseRepositoryPost;
+import com.mindunits.coursestudentmanager.repository.ProfessorRepositoryPost;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class CourseService {
@@ -34,22 +37,32 @@ public class CourseService {
         courseRepositoryPost.deleteById(id);
     }
 
-    public Course updateCourse(Long id, String nameCourse, String descriptionCourse, Date starDateCourse, Date endDateCourse) {
+    @Autowired
+    private ProfessorRepositoryPost professorRepositoryPost;
+
+    public Course updateCourse(Long id, String nameCourse, String descriptionCourse, Date startDateCourse, Date endDateCourse, Long newProfessorId) {
         Course existingCourse = courseRepositoryPost.findById(id).orElse(null);
 
         if (existingCourse == null) {
             throw new NoSuchElementException("Course with ID " + id + " not found");
         }
-        System.out.println();
+
         existingCourse.setName(nameCourse == null ? existingCourse.getName() : nameCourse);
         existingCourse.setDescription(descriptionCourse == null ? existingCourse.getDescription() : descriptionCourse);
-        existingCourse.setStartDate(starDateCourse == null ? existingCourse.getStartDate() :  starDateCourse);
+        existingCourse.setStartDate(startDateCourse == null ? existingCourse.getStartDate() : startDateCourse);
         existingCourse.setEndDate(endDateCourse == null ? existingCourse.getEndDate() : endDateCourse);
-        existingCourse.setProfessor(existingCourse.getProfessor());
+
+        // Obtén el nuevo profesor por su ID
+        Optional<Professor> newProfessorOptional = professorRepositoryPost.findById(newProfessorId);
+        if (newProfessorOptional.isPresent()) {
+            existingCourse.setProfessor(newProfessorOptional.get());
+        } else {
+            throw new NoSuchElementException("Professor with ID " + newProfessorId + " not found");
+        }
 
         return courseRepositoryPost.save(existingCourse);
-
     }
+
 
     public String getProfessorNameByCourseId(Long courseId) {
         Course course = courseRepositoryPost.findById(courseId)
