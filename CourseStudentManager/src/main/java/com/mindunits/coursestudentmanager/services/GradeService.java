@@ -33,6 +33,9 @@ public class GradeService {
         return gradeRepository.getById(id);
     }
 
+    public List<Grade> getGradesByStudent(Long studentId) {
+        return gradeRepository.findByStudentId(studentId);
+    }
     public Grade updateGrade(Long id, Double grade, String description) {
         Grade existingGrade = gradeRepository.findById(id).orElse(null);
 

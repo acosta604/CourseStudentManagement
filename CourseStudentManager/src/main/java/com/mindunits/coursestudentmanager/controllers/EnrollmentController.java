@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 
 @CrossOrigin(origins = "*") //para cargar los datos de la bd en el front
@@ -44,6 +45,17 @@ public class EnrollmentController {
         }
     }
 
+
+    @GetMapping("/api/enrollment/detail/{id}")
+    public ResponseEntity<Map<String, String>> getEnrollmentDetail(@PathVariable Long id) {
+        try {
+            Map<String, String> enrollmentDetails = enrollmentService.getEnrollmentDetailsById(id);
+            return ResponseEntity.ok(enrollmentDetails);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping("/api/enrollment/{id}")
     public ResponseEntity<Enrollment> getIdEnrollment(@PathVariable Long id){
         try {
@@ -66,4 +78,15 @@ public class EnrollmentController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/api/student/{studentId}/courses")
+    public ResponseEntity<List<Map<String, String>>> getCoursesByStudentId(@PathVariable Long studentId) {
+        try {
+            List<Map<String, String>> courses = enrollmentService.getCoursesByStudentId(studentId);
+            return ResponseEntity.ok(courses);
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

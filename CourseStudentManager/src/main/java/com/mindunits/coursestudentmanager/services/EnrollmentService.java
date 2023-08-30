@@ -1,16 +1,22 @@
 package com.mindunits.coursestudentmanager.services;
 
+import com.mindunits.coursestudentmanager.models.Course;
 import com.mindunits.coursestudentmanager.models.Enrollment;
+import com.mindunits.coursestudentmanager.repository.CourseRepositoryPost;
 import com.mindunits.coursestudentmanager.repository.EnrollmentRepository;
+import com.mindunits.coursestudentmanager.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Date;
-import java.util.List;
-import java.util.NoSuchElementException;
+
+import java.util.*;
 
 @Service
 public class EnrollmentService {
     private final EnrollmentRepository enrollmentRepository;
+    @Autowired
+    private CourseRepositoryPost courseRepositoryPost;
+    @Autowired
+    private StudentRepository studentRepository;
 
     @Autowired
     public EnrollmentService(EnrollmentRepository enrollmentRepository) {
@@ -24,6 +30,42 @@ public class EnrollmentService {
     public void deleteEnrollmentById(Long id) {
          enrollmentRepository.deleteById(id);
     }
+
+
+
+    public Map<String, String> getEnrollmentDetailsById(Long id) {
+        Enrollment enrollment = enrollmentRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Enrollment not found"));
+
+        Map<String, String> enrollmentDetails = new HashMap<>();
+        enrollmentDetails.put("courseName", enrollment.getCourse().getName());
+        enrollmentDetails.put("studentName", enrollment.getStudent().getName());
+        enrollmentDetails.put("status", enrollment.getStatus());
+
+        return enrollmentDetails;
+    }
+
+
+    public List<Map<String, String>> getCoursesByStudentId(Long studentId) {
+        List<Map<String, String>> courses = new ArrayList<>();
+
+        List<Enrollment> enrollments = enrollmentRepository.findByStudentId(studentId);
+
+        for (Enrollment enrollment : enrollments) {
+            Long courseId = enrollment.getCourse().getId();
+            Course course = courseRepositoryPost.findById(courseId)
+                    .orElseThrow(() -> new NoSuchElementException("Course not found"));
+
+            Map<String, String> courseInfo = new HashMap<>();
+            courseInfo.put("courseId", courseId.toString());
+            courseInfo.put("courseName", course.getName());
+            courses.add(courseInfo);
+        }
+
+        return courses;
+    }
+
+
 
     public List<Enrollment> getAllEnrollments() {
         return enrollmentRepository.findAll();
