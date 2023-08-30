@@ -61,6 +61,7 @@ public class CourseController {
         }
     }
 
+
     @PutMapping("/api/course/update/{id}")
     public ResponseEntity<Course> updateCourse(@PathVariable Long id, @RequestBody Course course){
         try {

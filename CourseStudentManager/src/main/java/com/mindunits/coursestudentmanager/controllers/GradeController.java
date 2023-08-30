@@ -7,8 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 @CrossOrigin(origins = "*") //para cargar los datos de la bd en el front
 @RestController
@@ -70,6 +69,35 @@ public class GradeController {
         }
     }
 
+    @GetMapping("/api/grade/student/{studentId}")
+    public Map<String, Object> getGradesByStudent(@PathVariable Long studentId) {
+        Map<String, Object> response = new HashMap<>();
 
+        try {
+            List<Grade> grades = gradeService.getGradesByStudent(studentId);
 
+            if (!grades.isEmpty()) {
+                response.put("studentId", grades.get(0).getStudent().getId());
+                response.put("studentName", grades.get(0).getStudent().getName());
+
+                List<Map<String, Object>> courseGrades = new ArrayList<>();
+                for (Grade grade : grades) {
+                    Map<String, Object> courseGrade = new HashMap<>();
+                    courseGrade.put("courseName", grade.getCourse().getName());
+                    courseGrade.put("idGrade", grade.getId());
+                    courseGrade.put("grade", grade.getGrade());
+                    courseGrade.put("gradeDescription", grade.getDescription()); // Agregar descripción de la nota
+                    courseGrades.add(courseGrade);
+                }
+
+                response.put("courseGrades", courseGrades);
+            } else {
+                response.put("error", "No grades found for the student");
+            }
+        } catch (Exception e) {
+            response.put("error", "An error occurred while fetching grades");
+        }
+
+        return response;
+    }
 }
